@@ -1,0 +1,81 @@
+/* Reset de margens */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #000;
+  overflow: hidden;
+}
+
+/* Contêiner do Sistema Solar */
+.solar-system {
+  position: relative;
+  width: 800px;
+  height: 800px;
+}
+
+/* Sol */
+.sun {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80px;
+  height: 80px;
+  background-color: #ffcc00;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 50px rgba(255, 204, 0, 0.7);
+}
+
+/* Órbitas */
+.orbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: none;
+  transform: translate(-50%, -50%);
+  animation: rotate-orbit infinite linear;
+}
+
+/* Animações das órbitas e tempos de cada planeta */
+@keyframes rotate-orbit {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Estilos para cada órbita */
+.mercury-orbit { width: 120px; height: 120px; animation-duration: 3s; }
+.venus-orbit { width: 180px; height: 180px; animation-duration: 5s; }
+.earth-orbit { width: 240px; height: 240px; animation-duration: 7s; }
+.mars-orbit { width: 300px; height: 300px; animation-duration: 9s; }
+.jupiter-orbit { width: 400px; height: 400px; animation-duration: 11s; }
+.saturn-orbit { width: 500px; height: 500px; animation-duration: 13s; }
+.uranus-orbit { width: 600px; height: 600px; animation-duration: 15s; }
+.neptune-orbit { width: 700px; height: 700px; animation-duration: 17s; }
+
+/* Planetas */
+.planet {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+}
+
+/* Estilos para cada planeta */
+.mercury { width: 10px; height: 10px; background-color: #b5b5b5; }
+.venus { width: 15px; height: 15px; background-color: #ffae42; }
+.earth { width: 18px; height: 18px; background-color: #3f84e5; }
+.mars { width: 12px; height: 12px; background-color: #ff4500; }
+.jupiter { width: 35px; height: 35px; background-color: #ff7f50; }
+.saturn { width: 30px; height: 30px; background-color: #d2b48c; }
+.uranus { width: 25px; height: 25px; background-color: #afeeee; }
+.neptune { width: 25px; height: 25px; background-color: #1e90ff; }
